@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    volumes:
+      - ./data:/app/data
+    restart: always
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHANNEL_ID=${CHANNEL_ID}
